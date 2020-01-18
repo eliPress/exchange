@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var u;
+        var e;
+        var i;
+        window.onload = function () {
+
+        }
+
+        function onClickEx() {
+            u = document.getElementById("id_usd");
+            e = document.getElementById("id_eur");
+            b = document.getElementById("id_baht");
+            i = document.getElementById("id_input").value;
+            if (u.selected) {
+                let z = i * 3.60288952;
+                id_div.innerHTML = `It will cost you :${z} NIS`
+            } else if (e.selected) {
+                let x = i * 4.05703374;
+                id_div.innerHTML = `It will cost you :${x} NIS`
+            } else if (b.selected) {
+                let w = i * 0.114741222;
+                id_div.innerHTML = `It will cost you :${w} NIS`
+            }
+
+        }
+    </script>
+</head>
+
+<body style="text-align: center;">
+    <div id="container">
+        <h2>Enter the currency you want to exchange:</h2>
+        <select style="font-size:1.5em;width: 170px;" id="id_select">
+            <option value="USD" id="id_usd">USD</option>
+            <option value="EUR" id="id_eur">EUR</option>
+            <option value="baht" id="id_baht">BAHT</option>
+        </select>
+        <br>
+        <br>
+        <h2>Enter the amount you want:</h2>
+        <input type="text" id="id_input">
+        <br>
+        <br>
+        <br>
+        <button onclick="onClickEx()">EX</button>
+        <div id="id_div" style="width: 150px; hight:50px;  text-align: left;margin-left: 600px;margin-top: 25px;">
+            It
+            will cost you :
+        </div>
+    </div>
+</body>
+
+</html>
